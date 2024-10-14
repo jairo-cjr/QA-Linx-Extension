@@ -1,0 +1,25 @@
+{
+	"manifest_version": 3,
+	"name": "Marcar Checkboxes",
+	"version": "1.0",
+	"description": "Extensão para marcar checkboxes com base em uma palavra-chave.",
+	"permissions": [
+		"tabs",
+		"activeTab",
+		"scripting"
+	],
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["chave.js"]
+		}
+	]
+}

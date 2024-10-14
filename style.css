@@ -1,0 +1,120 @@
+body {
+	font-family: Arial, sans-serif;
+	width: 200px;
+	padding: 10px;
+}
+
+h1 {
+	font-size: 18px;
+	margin-bottom: 10px; /* Adicionando margem abaixo do h1 */
+}
+
+input {
+	width: 100%;
+	padding: 10px; /* Aumentando o padding do input */
+	margin-bottom: 10px; /* Aumentando a margem abaixo do input */
+	border: 1px solid #ccc; /* Adicionando uma borda ao input para melhor visibilidade */
+	border-radius: 5px; /* Adicionando bordas arredondadas */
+}
+
+button {
+	width: 100%;
+	padding: 10px; /* Aumentando o padding dos botões */
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px; /* Adicionando bordas arredondadas */
+	margin-bottom: 10px; /* Adicionando margem abaixo dos botões */
+	font-size: 16px; /* Aumentando o tamanho da fonte para melhor visibilidade */
+}
+
+button#marcar {
+	background-color: lightgreen;
+}
+
+button#marcar:hover {
+	background-color: darkgreen;
+}
+
+button#desmarcar {
+	background-color: lightcoral;
+}
+
+button#desmarcar:hover {
+	background-color: darkred;
+}
+
+button#salvar {
+	background-color: lightblue;
+}
+
+button#salvar:hover {
+	background-color: darkblue;
+}
+
+span {
+	text-align: center;
+	padding: 10px;;
+}
+
+span#resultado{
+	font-size: 14px;;
+	background-color: lightyellow;
+}
+
+strong {
+	display: block; /* Tornando os textos em negrito como blocos para melhor espaçamento */
+	margin-top: 10px; /* Adicionando margem acima dos textos em negrito */
+}
+
+span#key {
+	font-size: 18px;;
+	background-color: beige;
+}
+
+button#copiarChaveButton {
+	background-color: lightgoldenrodyellow;
+	color: black;
+	font-weight: bold;;
+}
+
+button#copiarChaveButton:hover{
+	background-color: goldenrod;
+}
+
+button#botaoEdit {
+	color:  #202020;;
+	background-color: lightblue;
+}
+
+button#botaoEdit:hover {
+	background-color: darkblue;
+}
+
+button:hover {
+	transition: background-color 0.3s ease;
+}
+
+div#detalhes-checkboxes {
+	font-size: 14px; /* Set font size for better readability */
+	display: block; /* Ensure the div is displayed */
+	padding: 10px; /* Add padding for spacing */
+	border: 1px solid #ccc; /* Add a border for better visibility */
+	border-radius: 5px; /* Add rounded corners */
+	background-color: #f9f9f9; /* Light background color */
+	margin-top: 10px; /* Add margin on top for spacing */
+}
+
+div#detalhes-checkboxes ul {
+	list-style-type: none; /* Remove default list styling */
+	padding: 0; /* Remove default padding */
+}
+
+div#detalhes-checkboxes li {
+	padding: 5px 0; /* Increase padding for each list item to add more space */
+	border-bottom: 1px solid #eee; /* Add a bottom border for separation */
+}
+
+div#detalhes-checkboxes li:last-child {
+	border-bottom: none; /* Remove bottom border for the last item */
+}
