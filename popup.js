@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						chrome.scripting.executeScript({
 							target: { tabId: tabs[0].id },
 							func: function () {
-								var submitButton = document.querySelector('input[type="submit"].default');
+								var submitButton = Array.from(document.querySelectorAll('input[type="submit"].default')).find(button => button.value === 'Salvar');
 								if (submitButton)
 								{
 									submitButton.click();
