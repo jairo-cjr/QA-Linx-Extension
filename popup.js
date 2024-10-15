@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
 									else
 									{
 										let detalhesDiv = document.getElementById('detalhes-checkboxes');
-										detalhesDiv.style.display = 'nonne';
+										detalhesDiv.style.display = 'none';
 									}
 								} else
 								{
