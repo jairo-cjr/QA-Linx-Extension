@@ -6,50 +6,60 @@ body {
 
 h1 {
 	font-size: 18px;
-	margin-bottom: 10px; /* Adicionando margem abaixo do h1 */
+	margin-bottom: 10px;
 }
 
 input {
 	width: 100%;
-	padding: 10px; /* Aumentando o padding do input */
-	margin-bottom: 10px; /* Aumentando a margem abaixo do input */
-	border: 1px solid #ccc; /* Adicionando uma borda ao input para melhor visibilidade */
-	border-radius: 5px; /* Adicionando bordas arredondadas */
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 }
 
 button {
 	width: 100%;
-	padding: 10px; /* Aumentando o padding dos botões */
+	padding: 10px;
 	color: white;
 	border: none;
 	cursor: pointer;
-	border-radius: 5px; /* Adicionando bordas arredondadas */
-	margin-bottom: 10px; /* Adicionando margem abaixo dos botões */
-	font-size: 16px; /* Aumentando o tamanho da fonte para melhor visibilidade */
+	border-radius: 5px;
+	margin-bottom: 10px;
+	font-size: 16px;
 }
 
 button#marcar {
-	background-color: lightgreen;
+	background-color: hsl(120, 73%, 30%);
 }
 
 button#marcar:hover {
-	background-color: darkgreen;
+	background-color: hsl(120, 73%, 10%);
 }
 
 button#desmarcar {
-	background-color: lightcoral;
+	background-color: hsl(0, 79%, 30%);
 }
 
 button#desmarcar:hover {
-	background-color: darkred;
+	background-color: hsl(0, 79%, 25%);
 }
 
-button#salvar, button.default {
-	background-color: lightblue;
+button#salvar {
+	background-color: hsl(195, 53%, 30%);
 }
 
-button#salvar:hover, button.default:hover{
-	background-color: darkblue;
+button#salvar:hover{
+	background-color: hsl(195, 53%, 20%);
+}
+
+button.default {
+	color: black;
+	background-color: lightgray;
+}
+
+button.default:hover{
+	color: black;
+	background-color: darkgray;
 }
 
 span {
@@ -63,8 +73,8 @@ span#resultado{
 }
 
 strong {
-	display: block; /* Tornando os textos em negrito como blocos para melhor espaçamento */
-	margin-top: 10px; /* Adicionando margem acima dos textos em negrito */
+	display: block;
+	margin-top: 10px;
 }
 
 span#key {
@@ -96,25 +106,25 @@ button:hover {
 }
 
 div#detalhes-checkboxes {
-	font-size: 14px; /* Set font size for better readability */
-	display: block; /* Ensure the div is displayed */
-	padding: 10px; /* Add padding for spacing */
-	border: 1px solid #ccc; /* Add a border for better visibility */
-	border-radius: 5px; /* Add rounded corners */
-	background-color: #f9f9f9; /* Light background color */
-	margin-top: 10px; /* Add margin on top for spacing */
+	font-size: 14px;
+	display: block;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	margin-top: 10px;
 }
 
 div#detalhes-checkboxes ul {
-	list-style-type: none; /* Remove default list styling */
-	padding: 0; /* Remove default padding */
+	list-style-type: none;
+	padding: 0;
 }
 
 div#detalhes-checkboxes li {
-	padding: 5px 0; /* Increase padding for each list item to add more space */
-	border-bottom: 1px solid #eee; /* Add a bottom border for separation */
+	padding: 5px 0;
+	border-bottom: 1px solid #eee;
 }
 
 div#detalhes-checkboxes li:last-child {
-	border-bottom: none; /* Remove bottom border for the last item */
+	border-bottom: none;
 }

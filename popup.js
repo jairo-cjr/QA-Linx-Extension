@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (tabs.length > 0)
 		{
 			var currentTab = tabs[0];
-			console.log("URL da aba atual:", currentTab.url); // Log da URL da aba
+			console.log("URL da aba atual:", currentTab.url);
 
 			if (currentTab.url === optionalUrl)
 			{
-				inserirChaveECriarBotaoCopiar(); // Chama a função apenas se estiver na URL correta
+				inserirChaveECriarBotaoCopiar();
 				var moduloPageButton = document.getElementById('moduloPage');
 				moduloPageButton.style.display = 'block';
 				moduloPageButton.addEventListener('click', function () {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				document.querySelectorAll('.modulo').forEach(function (element) {
 					element.style.display = 'block';
 				});
-				inserirBotoesModulo(); // Chama a função apenas se estiver na URL correta
+				inserirBotoesModulo();
 			}
 			else
 			{
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
 								if (submitButton)
 								{
 									submitButton.click();
-									return true; // Retorna true se o botão for clicado
+									return true;
 								} else
 								{
 									console.error('Elemento não encontrado');
@@ -220,12 +220,12 @@ document.addEventListener('DOMContentLoaded', function () {
 								console.error('Erro ao injetar script:', chrome.runtime.lastError);
 							} else if (results[0] && results[0].result === true)
 							{
-								// Aguarda um pequeno intervalo para o formulário ser processado antes de redirecionar
+
 								setTimeout(function () {
 									chrome.tabs.update(tabs[0].id, { url: optionalUrl }, function (tab) {
 										console.log('Aba atualizada com a URL:', tab.url);
 									});
-								}, 1000); // Ajuste o tempo conforme necessário
+								}, 1000);
 							} else
 							{
 								console.log('O botão submit não foi encontrado ou clicado.');
@@ -264,8 +264,8 @@ document.addEventListener('DOMContentLoaded', function () {
 							}
 						});
 
-						console.log("Chave encontrada:", chaveSenha); // Log da chave encontrada
-						return chaveSenha; // Retorna a chave encontrada
+						console.log("Chave encontrada:", chaveSenha);
+						return chaveSenha;
 					}
 				}, function (results) {
 					if (results && results[0] && results[0].result)
@@ -275,9 +275,8 @@ document.addEventListener('DOMContentLoaded', function () {
 						{
 							spanChave.innerText = `${results[0].result.replace(/\n/g, '')}`;
 							spanChave.style.display = 'block';
-							console.log("Texto no span 'key':", spanChave.innerText); // Log do texto do span
+							console.log("Texto no span 'key':", spanChave.innerText);
 
-							// Criar o botão de copiar
 							if (!document.getElementById('copiarChaveButton'))
 							{
 								var copiarButton = document.createElement('button');
