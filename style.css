@@ -44,11 +44,11 @@ button#desmarcar:hover {
 	background-color: darkred;
 }
 
-button#salvar {
+button#salvar, button.default {
 	background-color: lightblue;
 }
 
-button#salvar:hover {
+button#salvar:hover, button.default:hover{
 	background-color: darkblue;
 }
 

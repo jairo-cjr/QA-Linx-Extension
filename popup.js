@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			var currentTab = tabs[0];
 			console.log("URL da aba atual:", currentTab.url); // Log da URL da aba
 
-			if ((currentTab.url !== desiredUrl) && (currentTab.url !== optionalUrl))
-			{
-				chrome.tabs.create({ url: desiredUrl });
-			} else if (currentTab.url === optionalUrl)
+			if (currentTab.url === optionalUrl)
 			{
 				inserirChaveECriarBotaoCopiar(); // Chama a função apenas se estiver na URL correta
+				var moduloPageButton = document.getElementById('moduloPage');
+				moduloPageButton.style.display = 'block';
+				moduloPageButton.addEventListener('click', function () {
+					chrome.tabs.create({ url: desiredUrl });
+				});
 			}
 			else if (currentTab.url === desiredUrl)
 			{
@@ -22,6 +24,21 @@ document.addEventListener('DOMContentLoaded', function () {
 					element.style.display = 'block';
 				});
 				inserirBotoesModulo(); // Chama a função apenas se estiver na URL correta
+			}
+			else
+			{
+				document.querySelectorAll('.default').forEach(function (element) {
+					element.style.display = 'block';
+				});
+				var homeButton = document.getElementById('home');
+				homeButton.addEventListener('click', function () {
+					chrome.tabs.create({ url: optionalUrl });
+				});
+
+				var moduloPageButton = document.getElementById('moduloPage');
+				moduloPageButton.addEventListener('click', function () {
+					chrome.tabs.create({ url: desiredUrl });
+				});
 			}
 		} else
 		{
