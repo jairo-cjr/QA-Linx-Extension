@@ -44,11 +44,11 @@ button#desmarcar:hover {
 	background-color: hsl(0, 79%, 25%);
 }
 
-button#salvar {
+button#salvar,  button#issueButton{
 	background-color: hsl(195, 53%, 30%);
 }
 
-button#salvar:hover{
+button#salvar:hover, button#issueButton:hover {
 	background-color: hsl(195, 53%, 20%);
 }
 
