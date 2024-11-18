@@ -45,7 +45,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     var issueInputValue = document.getElementById('issue').value;
                     if (issueInputValue)
                     {
-                        var jiraUrl = 'https://jira.linx.com.br/browse/POSTOSPOS-' + issueInputValue;
+                        if (issueInputValue.toLowerCase().includes('as3'))
+                        {
+                            var issueInputValue = issueInputValue.replace(/\D/g, '');
+                            var jiraUrl = 'https://jira.linx.com.br/browse/POSTOSAS3-' + issueInputValue;
+                        } else
+                        {
+                            var jiraUrl = 'https://jira.linx.com.br/browse/POSTOSPOS-' + issueInputValue;
+                        }
                         chrome.tabs.create({ url: jiraUrl });
                     }
                 });
