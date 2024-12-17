@@ -45,15 +45,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     var issueInputValue = document.getElementById('issue').value;
                     if (issueInputValue)
                     {
-                        if (issueInputValue.toLowerCase().includes('as3'))
+                        if (issueInputValue.toLowerCase().startsWith('as3-'))
                         {
-                            var issueInputValue = issueInputValue.replace(/\D/g, '');
+                            var issueInputValue = issueInputValue.substring(4);
                             var jiraUrl = 'https://jira.linx.com.br/browse/POSTOSAS3-' + issueInputValue;
                         } else
                         {
                             var jiraUrl = 'https://jira.linx.com.br/browse/POSTOSPOS-' + issueInputValue;
                         }
                         chrome.tabs.create({ url: jiraUrl });
+                    }
+                });
+
+                document.getElementById('issue').addEventListener('keypress', function (event) {
+                    if (event.key === 'Enter')
+                    {
+                        document.getElementById('issueButton').click();
                     }
                 });
             }
