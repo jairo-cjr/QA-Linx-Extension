@@ -41,8 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
                 var issueButton = document.getElementById('issueButton');
+				var issueInput = document.getElementById('issue');
+				if (issueInput) issueInput.focus();
                 issueButton.addEventListener('click', function () {
-                    var issueInputValue = document.getElementById('issue').value;
+					var issueInputValue = issueInput.value;
                     if (issueInputValue)
                     {
                         if (issueInputValue.toLowerCase().startsWith('as3-'))

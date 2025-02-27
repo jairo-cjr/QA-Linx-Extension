@@ -1,8 +1,8 @@
 {
 	"manifest_version": 3,
-	"name": "Marcar Checkboxes",
+	"name": "QA-Linx-Extension",
 	"version": "1.0",
-	"description": "Extensão para marcar checkboxes com base em uma palavra-chave.",
+	"description": "Extensão para modificar módulos da licença. Copiar chave diária e buscar por issues no JIRA.",
 	"permissions": [
 		"tabs",
 		"activeTab",
@@ -18,8 +18,20 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
-			"js": ["popup.js"]
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"popup.js"
+			]
 		}
-	]
+	],
+	"commands": {
+		"_execute_action": {
+			"suggested_key": {
+				"default": "Ctrl+Q"
+			},
+			"description": "Atalho para abrir o Pop-Up"
+		}
+	}
 }
