@@ -1,0 +1,91 @@
+{
+  "QA Documentation Panel": {
+    "prefix": "qa-doc",
+    "body": [
+      "{panel:title=📝 Orientações para Documentação — A ser preenchido pelo QA|",
+	  "borderStyle=solid|",
+	  "borderColor=#c8e6c9|",
+	  "titleBGColor=#a5d6a7|",
+	  "bgColor=#f1f8e9}",
+      "*1️⃣ — Esta entrega impacta quais produtos?*",
+      " {color:#f5f5f5} Indique quais produtos foram impactados com esta entrega {color}",
+      "||*Retaguarda*||",
+      "|*AutoSystem*|(/)|",
+      "|*Seller / Empório*|(x)|",
+      "||*Produto*||",
+      "|*PDV*|(/)|",
+      "----",
+      "*2️⃣ — O que foi feito no sistema?*",
+      " {color:#f5f5f5} Descreva conforme o tipo de entrega {color}",
+      " ||*Bug 🐞*||",
+      "|*Problema*|Lorem|",
+      "|*Solução*|Lorem|",
+      "||*Melhoria ou Implementação 🔧*||",
+      "|*Texto de divulgação*|Lorem|",
+      "----",
+      "*3️⃣ — Qual o local alterado?*",
+      " {color:#f5f5f5} Informe o sistema, a tela e o menu para chegar até ela {color}",
+      "----",
+      "*4️⃣ — Esta entrega traz quais benefícios?*",
+      " {color:#f5f5f5} Descreva os benefícios que esta entrega traz para os clientes {color}",
+      "----",
+      "*5️⃣ — Depende de algum processo ou parametrização?*",
+      " {color:#f5f5f5} Para que esta alteração/implementação funcione, é necessário fazer algum processo e/ou parametrização? Descreva o que é preciso fazer para habilitar a funcionalidade/rotina {color}",
+      "----",
+      "*6️⃣ — Vídeo / Mídia*",
+      " {color:#f5f5f5} (Insira um vídeo demonstrando a rotina/funcionalidade) {color}",
+      "{panel}"
+    ],
+    "description": "Snippet para orientações de documentação do QA"
+  },
+  "QA Issue": {
+	"prefix": "qa-issue",
+	"body": [
+		"{panel:",
+		"borderColor=#ebedee|",
+		"bgColor=#fdfbfb}",
+		"*🖥️ PRODUTO:*",
+		"*🏢 RETAGUARDA:*",
+		"*🧾 DOC. FISCAL:*",
+		"----",
+		"*📝 COMO REPRODUZIR*",
+		"{code:YAML}",
+		"\\BDD",
+		"{code}",
+		"",
+		"*🔍 ANALISE*",
+		"",
+		"*📎 ANEXOS",
+		"",
+		"{panel}"
+	]
+  },
+  "QA Image": {
+    "prefix": "qa-img",
+    "body": [
+      "!image.png|width=50%!",
+	  "!image.png|height=25%!"
+    ],
+    "description": "Inserir imagem"
+  },
+  "Code Block": {
+    "prefix": "qa-code",
+    "body": [
+		"{code:python}",
+		"// Some comments here",
+		"{code}"
+    ],
+    "description": "Inseriri bloco de código"
+  },
+  "Panel": {
+	"prefix": "qa-panel",
+	"body": [
+		"{panel:title= Report QA |",
+		"borderStyle=solid|",
+		"borderColor=#c8e6c9|",
+		"titleBGColor=#a5d6a7|",
+		"bgColor=#f1f8e9}",
+		"{panel}"
+	]
+  }
+}

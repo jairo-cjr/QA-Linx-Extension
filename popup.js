@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var desiredUrl = 'http://intranet.lzt.com.br/cliente/200/modulo/';
-    var optionalUrl = 'http://intranet.lzt.com.br/cliente/200/view/';
+    var desiredUrl = 'http://intranet.lzt.com.br/cliente/200/modulo/'
+    var optionalUrl = 'http://intranet.lzt.com.br/cliente/200/view/'
     var editURL = 'http://intranet.lzt.com.br/cliente/200/edit/'
+	var jiraUrl = 'https://jira.linx.com.br/'
 
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         if (tabs.length > 0)
@@ -25,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
                 inserirBotoesModulo();
             }
+			else if (currentTab.url.includes('jira.linx')) {
+				document.getElementById('snippetsContainer').style.display = 'block';
+				inserirBotoesSnippets();
+			}
             else
             {
                 document.querySelectorAll('.default').forEach(function (element) {
@@ -339,4 +344,44 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});
+
+	function inserirBotoesSnippets() {
+		var snippetsContainer = document.getElementById('snippetsContainer');
+		if (!snippetsContainer)
+		{
+			console.error('snippetsContainer não encontrado');
+			return;
+		}
+
+		fetch('snippets.json')
+			.then(response => response.json())
+			.then(snippets => {
+				Object.values(snippets).forEach(snippet => {
+					if (snippet.body && snippet.body.length > 0)
+					{
+						let button = document.createElement('button');
+						button.textContent = snippet.prefix.toLowerCase();
+						button.classList.add('snippet-button'); // Classe base
+						button.setAttribute('title', snippet.body.join('\n'));
+
+						button.addEventListener('click', () => {
+							let formattedText = snippet.body.join('\n');
+							navigator.clipboard.writeText(formattedText)
+								.then(() => {
+									button.classList.add('copied');
+									button.textContent = `✔ ${snippet.prefix.toLowerCase()}`;
+									setTimeout(() => {
+										button.classList.remove('copied');
+										button.textContent = snippet.prefix.toLowerCase();
+									}, 1500);
+								})
+								.catch(err => console.error('Erro ao copiar:', err));
+						});
+
+						snippetsContainer.appendChild(button);
+					}
+				});
+			})
+			.catch(error => console.error('Erro ao carregar snippets:', error));
+	}
+})

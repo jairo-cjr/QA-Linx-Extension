@@ -128,3 +128,31 @@ div#detalhes-checkboxes li {
 div#detalhes-checkboxes li:last-child {
 	border-bottom: none;
 }
+
+.snippet-button {
+    width: 85%;
+    height: auto;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.snippet-button:hover {
+    background-color: #005bb5;
+}
+
+.snippet-button.copied {
+    background-color: #28a745 !important; /* Verde */
+    color: white;
+}
+
+
+
