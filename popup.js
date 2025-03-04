@@ -362,6 +362,9 @@ document.addEventListener('DOMContentLoaded', function () {
 						let button = document.createElement('button');
 						button.textContent = snippet.prefix.toLowerCase();
 						button.classList.add('snippet-button'); // Classe base
+						if (snippet.prefix.toLowerCase() === 'issue-regressivo'){
+							button.classList.add('regressivo');
+						}
 						button.setAttribute('title', snippet.body.join('\n'));
 
 						button.addEventListener('click', () => {

@@ -150,9 +150,17 @@ div#detalhes-checkboxes li:last-child {
 }
 
 .snippet-button.copied {
-    background-color: #28a745 !important; /* Verde */
+    background-color: #28a745 !important;
     color: white;
 }
 
+.snippet-button.regressivo {
+	transition: background-color 0.5s ease;
+	background-color: #8b00b5;
+}
+
+.snippet-button.regressivo:hover {
+	background-color: #8b00b5cb;
+}
 
 
