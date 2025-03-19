@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			else if (currentTab.url.includes('jira.linx')) {
 				document.getElementById('snippetsContainer').style.display = 'block';
 				inserirBotoesSnippets();
+				inserirBotoesIssue();
 			}
             else
             {
@@ -44,32 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 moduloPageButton.addEventListener('click', function () {
                     chrome.tabs.create({ url: desiredUrl });
                 });
-
-                var issueButton = document.getElementById('issueButton');
-				var issueInput = document.getElementById('issue');
-				if (issueInput) issueInput.focus();
-                issueButton.addEventListener('click', function () {
-					var issueInputValue = issueInput.value;
-                    if (issueInputValue)
-                    {
-                        if (issueInputValue.toLowerCase().startsWith('as3-'))
-                        {
-                            var issueInputValue = issueInputValue.substring(4);
-                            var jiraUrl = 'https://jira.linx.com.br/browse/POSTOSAS3-' + issueInputValue;
-                        } else
-                        {
-                            var jiraUrl = 'https://jira.linx.com.br/browse/POSTOSPOS-' + issueInputValue;
-                        }
-                        chrome.tabs.create({ url: jiraUrl });
-                    }
-                });
-
-                document.getElementById('issue').addEventListener('keypress', function (event) {
-                    if (event.key === 'Enter')
-                    {
-                        document.getElementById('issueButton').click();
-                    }
-                });
+                inserirBotoesIssue();
             }
         } else
         {
@@ -387,4 +363,40 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 			.catch(error => console.error('Erro ao carregar snippets:', error));
 	}
+
+    function inserirBotoesIssue() {
+        var issueButton = document.getElementById('issueButton');
+        var issueInput = document.getElementById('issue');
+        issueButton.style.display = 'block';
+        issueInput.style.display = 'block';
+
+        if (issueInput) {
+            issueInput.focus();
+        }
+
+        if (issueButton) {
+            issueButton.addEventListener('click', function () {
+                var issueInputValue = issueInput.value;
+                if (issueInputValue) {
+                    var jiraUrl;
+                    if (issueInputValue.toLowerCase().startsWith('as3-')) {
+                        issueInputValue = issueInputValue.substring(4);
+                        jiraUrl = 'https://jira.linx.com.br/browse/POSTOSAS3-' + issueInputValue;
+                    } else {
+						issueInputValue = issueInputValue.replace(/\D/g, '');
+                        jiraUrl = 'https://jira.linx.com.br/browse/POSTOSPOS-' + issueInputValue;
+                    }
+                    chrome.tabs.create({ url: jiraUrl });
+                }
+            });
+        }
+
+        if (issueInput) {
+            issueInput.addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    document.getElementById('issueButton').click();
+                }
+            });
+        }
+    }
 })

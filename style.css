@@ -2,6 +2,7 @@ body {
 	font-family: Arial, sans-serif;
 	width: 200px;
 	padding: 10px;
+	box-sizing: border-box;
 }
 
 h1 {
@@ -9,22 +10,28 @@ h1 {
 	margin-bottom: 10px;
 }
 
-input {
+input, button {
+	box-sizing: border-box;
 	width: 100%;
 	padding: 10px;
 	margin-bottom: 10px;
-	border: 1px solid #ccc;
 	border-radius: 5px;
 }
 
+input {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: block;
+}
+
+input:focus {
+	border: 1px solid hsl(195, 53%, 30%);
+	outline: none;
+}
+
 button {
-	width: 100%;
-	padding: 10px;
 	color: white;
 	border: none;
 	cursor: pointer;
-	border-radius: 5px;
-	margin-bottom: 10px;
 	font-size: 16px;
 }
 
@@ -130,7 +137,7 @@ div#detalhes-checkboxes li:last-child {
 }
 
 .snippet-button {
-    width: 85%;
+    width: 100%;
     height: auto;
     font-size: 14px;
     margin: 5px;
