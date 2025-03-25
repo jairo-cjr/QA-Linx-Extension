@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(response => response.json())
 			.then(snippets => {
 				Object.values(snippets).forEach(snippet => {
-					if (snippet.body && snippet.body.length > 0)
+					if (snippet.body && snippet.body.length > 0 && snippet.enable)
 					{
 						let button = document.createElement('button');
 						button.textContent = snippet.prefix.toLowerCase();

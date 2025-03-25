@@ -1,11 +1,13 @@
 {
 	"Issue Regressivo": {
+		"enable": false,
 		"prefix": "issue-regressivo",
 		"body": [
 			"POSTOSPOS-17159"
 		]
 	},
 	"QA Documentation Panel": {
+		"enable": true,
 		"prefix": "qa-doc",
 		"body": [
 			"{panel:title=📝 Orientações para Documentação — A ser preenchido pelo QA|",
@@ -45,6 +47,7 @@
 		"description": "Snippet para orientações de documentação do QA"
 	},
 	"QA Issue": {
+		"enable": true,
 		"prefix": "qa-issue",
 		"body": [
 			"{panel:",
@@ -54,19 +57,25 @@
 			"*🏢 RETAGUARDA:*",
 			"*🧾 DOC. FISCAL:*",
 			"----",
+			"*⚙️ PRÉ-REQUISITOS:*",
+			"",
 			"*📝 COMO REPRODUZIR*",
+			"",
 			"{code:YAML}",
+			"\\BDD",
+			"{code}",
+			"",
+			"{code:python}",
 			"\\BDD",
 			"{code}",
 			"",
 			"*🔍 ANALISE*",
 			"",
-			"*📎 ANEXOS",
-			"",
 			"{panel}"
 		]
 	},
 	"QA Image": {
+		"enable": true,
 		"prefix": "qa-img",
 		"body": [
 			"!image.png|width=50%!",
@@ -75,6 +84,7 @@
 		"description": "Inserir imagem"
 	},
 	"Code Block": {
+		"enable": true,
 		"prefix": "qa-code",
 		"body": [
 			"{code:python}",
@@ -84,6 +94,7 @@
 		"description": "Inseriri bloco de código"
 	},
 	"Panel": {
+		"enable": true,
 		"prefix": "qa-panel",
 		"body": [
 			"{panel:title= Report QA |",
