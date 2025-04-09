@@ -5,12 +5,15 @@ body {
 	box-sizing: border-box;
 }
 
+/* Titulos */
 h1 {
 	font-size: 18px;
 	margin-bottom: 10px;
 }
 
-input, button {
+/* Inputs e Botões */
+input,
+button {
 	box-sizing: border-box;
 	width: 100%;
 	padding: 10px;
@@ -19,64 +22,67 @@ input, button {
 }
 
 input {
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid var(--gray-light);
 	display: block;
 }
 
 input:focus {
-	border: 1px solid hsl(195, 53%, 30%);
+	border: 1px solid var(--blue-royal);
 	outline: none;
 }
 
 button {
-	color: white;
+	color: var(--white-pure);
 	border: none;
 	cursor: pointer;
 	font-size: 16px;
 }
 
+/* Botões específicos */
 button#marcar {
-	background-color: hsl(120, 73%, 30%);
+	background-color: var(--green-forest);
 }
 
 button#marcar:hover {
-	background-color: hsl(120, 73%, 10%);
+	background-color: var(--green-olive);
 }
 
 button#desmarcar {
-	background-color: hsl(0, 79%, 30%);
+	background-color: var(--red-fire-engine);
 }
 
 button#desmarcar:hover {
-	background-color: hsl(0, 79%, 25%);
+	background-color: var(--red-cherry);
 }
 
-button#salvar,  button#issueButton{
-	background-color: hsl(195, 53%, 30%);
+button#salvar,
+button#issueButton {
+	background-color: var(--yellow-royal);
 }
 
-button#salvar:hover, button#issueButton:hover {
-	background-color: hsl(195, 53%, 20%);
+button#salvar:hover,
+button#issueButton:hover {
+	background-color: var(--yellow-sunflower);
 }
 
 button.default {
-	color: black;
-	background-color: lightgray;
+	color: var(--black-charcoal);
+	background-color: var(--gray-light);
 }
 
-button.default:hover{
-	color: black;
-	background-color: darkgray;
+button.default:hover {
+	color: var(--black-charcoal);
+	background-color: var(--gray-medium);
 }
 
 span {
 	text-align: center;
-	padding: 10px;;
+	padding: 10px;
 }
 
-span#resultado{
-	font-size: 14px;;
-	background-color: lightyellow;
+span#resultado {
+	font-size: 14px;
+	background-color: var(--yellow-cream);
 }
 
 strong {
@@ -85,40 +91,42 @@ strong {
 }
 
 span#key {
-	font-size: 18px;;
-	background-color: beige;
+	font-size: 18px;
+	background-color: var(--white-pearl);
 }
 
 button#copiarChaveButton {
-	background-color: lightgoldenrodyellow;
-	color: black;
-	font-weight: bold;;
+	background-color: var(--yellow-minion);
+	color: var(--black-charcoal);
+	font-weight: bold;
 }
 
-button#copiarChaveButton:hover{
-	background-color: goldenrod;
+button#copiarChaveButton:hover {
+	background-color: var(--yellow-sunflower);
 }
 
 button#botaoEdit {
-	color:  #202020;;
-	background-color: lightblue;
+	color: var(--black-charcoal);
+	background-color: var(--blue-sky);
 }
 
 button#botaoEdit:hover {
-	background-color: darkblue;
+	background-color: var(--blue-navy);
 }
 
+/* Efeito hover para botões */
 button:hover {
 	transition: background-color 0.3s ease;
 }
 
+/* Caixa de detalhes */
 div#detalhes-checkboxes {
 	font-size: 14px;
 	display: block;
 	padding: 10px;
-	border: 1px solid #ccc;
+	border: 1px solid var(--gray-medium);
 	border-radius: 5px;
-	background-color: #f9f9f9;
+	background-color: var(--gray-light);
 	margin-top: 10px;
 }
 
@@ -129,45 +137,44 @@ div#detalhes-checkboxes ul {
 
 div#detalhes-checkboxes li {
 	padding: 5px 0;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--gray-silver);
 }
 
 div#detalhes-checkboxes li:last-child {
 	border-bottom: none;
 }
 
+/* Botão de snippet */
 .snippet-button {
-    width: 100%;
-    height: auto;
-    font-size: 14px;
-    margin: 5px;
-    cursor: pointer;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.5s ease;
+	width: 100%;
+	height: auto;
+	font-size: 14px;
+	margin: 5px;
+	cursor: pointer;
+	background-color: var(--blue-royal);
+	color: var(--white-pure);
+	border: none;
+	border-radius: 5px;
+	transition: background-color 0.5s ease;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .snippet-button:hover {
-    background-color: #005bb5;
+	background-color: var(--blue-navy);
 }
 
 .snippet-button.copied {
-    background-color: #28a745 !important;
-    color: white;
+	background-color: var(--green-emerald) !important;
+	color: var(--white-pure);
 }
 
 .snippet-button.regressivo {
 	transition: background-color 0.5s ease;
-	background-color: #8b00b5;
+	background-color: var(--purple-violet);
 }
 
 .snippet-button.regressivo:hover {
-	background-color: #8b00b5cb;
+	background-color: var(--purple-amethyst);
 }
-
-

@@ -1,0 +1,64 @@
+:root {
+	/* 🟡 Amarelo */
+	--yellow-bumblebee: #FCE205;
+	--yellow-minion: #F5E050;
+	--yellow-royal: #FADA5E;
+	--yellow-cream: #FFFFCC;
+	--yellow-sunflower: #FFDA03;
+
+	/* 🔴 Vermelho */
+	--red-scarlet: #FF2400;
+	--red-crimson: #DC143C;
+	--red-fire-engine: #CE2029;
+	--red-tomato: #FF6347;
+	--red-cherry: #DE3163;
+
+	/* 🟢 Verde */
+	--green-emerald: #50C878;
+	--green-lime: #32CD32;
+	--green-forest: #228B22;
+	--green-mint: #98FF98;
+	--green-olive: #6B8E23;
+
+	/* 🔵 Azul */
+	--blue-royal: #4169E1;
+	--blue-sky: #87CEEB;
+	--blue-navy: #000080;
+	--blue-cyan: #00FFFF;
+	--blue-electric: #7DF9FF;
+
+	/* 🟠 Laranja */
+	--orange-pumpkin: #FF7518;
+	--orange-tangerine: #F28500;
+	--orange-burnt: #CC5500;
+	--orange-amber: #FFBF00;
+	--orange-coral: #FF7F50;
+
+	/* 🟣 Roxo */
+	--purple-violet: #8F00FF;
+	--purple-lavender: #B57EDC;
+	--purple-amethyst: #9966CC;
+	--purple-grape: #6F2DA8;
+	--purple-plum: #DDA0DD;
+
+		/* ⚫ Preto e Cinza */
+	--black-jet: #343434;
+	--black-charcoal: #2C2C2C;
+	--black-onyx: #353839;
+	--black-obsidian: #0D0D0D;
+	--black-true: #000000;
+
+	/* ⚪ Branco e Cinza Claro */
+	--white-pure: #FFFFFF;
+	--white-smoke: #F5F5F5;
+	--white-ghost: #F8F8FF;
+	--white-ivory: #FFFFF0;
+	--white-pearl: #EAE0C8;
+
+	/* 🔘 Tons de Cinza */
+	--gray-light: #F2F2F2;
+	--gray-silver: #C0C0C0;
+	--gray-medium: #A9A9A9;
+	--gray-slate: #708090;
+	--gray-dark: #505050;
+}

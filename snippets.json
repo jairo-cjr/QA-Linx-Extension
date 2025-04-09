@@ -74,34 +74,56 @@
 			"{panel}"
 		]
 	},
-	"QA Image": {
+	"Panel Cinza": {
 		"enable": true,
-		"prefix": "qa-img",
+		"prefix": "cinza-panel",
+		"bgColor": "#f2f2f2",
 		"body": [
-			"!image.png|width=50%!",
-			"!image.png|height=25%!"
-		],
-		"description": "Inserir imagem"
-	},
-	"Code Block": {
-		"enable": true,
-		"prefix": "qa-code",
-		"body": [
-			"{code:python}",
-			"// Some comments here",
-			"{code}"
-		],
-		"description": "Inseriri bloco de código"
-	},
-	"Panel": {
-		"enable": true,
-		"prefix": "qa-panel",
-		"body": [
-			"{panel:title= Report QA |",
+			"{panel:title= Report QA|",
+			"titleBGColor=#e3e3e3|",
 			"borderStyle=solid|",
-			"borderColor=#c8e6c9|",
-			"titleBGColor=#a5d6a7|",
-			"bgColor=#f1f8e9}",
+			"borderColor=#e3e3e3|",
+			"bgColor=#f2f2f2}",
+			"{panel}"
+		]
+	},
+	"Panel Verde": {
+		"enable": true,
+		"prefix": "verde-panel",
+		"bgColor": "#C8E6C9",
+		"body": [
+			"{panel:title= Report QA|",
+			"titleBGColor=#388E3C|",
+			"borderStyle=solid|",
+			"borderColor=#81C784|",
+			"bgColor=#C8E6C9}",
+			"{panel}"
+		]
+	},
+	"Panel Amarelo": {
+		"enable": true,
+		"prefix": "amarelo-panel",
+		"bgColor": "#FFF9C4",
+		"body": [
+			"{panel:title= Report QA|",
+			"titleBGColor=#FBC02D|",
+			"borderStyle=solid|",
+			"borderColor=#FDD835|",
+			"bgColor=#FFF9C4}",
+			"{panel}"
+		]
+	},
+	"Panel Vermelho": {
+		"enable": true,
+		"prefix": "vermelho-panel",
+		"bgColor": "#FFCDD2",
+		"body": [
+			"{panel:title= Report QA|",
+			"titleColor=#F8F8FF|",
+			"titleBGColor=#D32F2F|",
+			"borderStyle=solid|",
+			"borderColor=#E57373|",
+			"bgColor=#FFCDD2}",
 			"{panel}"
 		]
 	}

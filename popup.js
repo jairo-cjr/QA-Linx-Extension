@@ -338,6 +338,9 @@ document.addEventListener('DOMContentLoaded', function () {
 						let button = document.createElement('button');
 						button.textContent = snippet.prefix.toLowerCase();
 						button.classList.add('snippet-button'); // Classe base
+						if (snippet.bgColor) {
+							button.style.backgroundColor = snippet.bgColor;
+						}
 						if (snippet.prefix.toLowerCase() === 'issue-regressivo'){
 							button.classList.add('regressivo');
 						}
