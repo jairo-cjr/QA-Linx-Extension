@@ -2,27 +2,33 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcar Checkbox</title>
-    <link rel="stylesheet" href="cores.css">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marcar Checkbox</title>
+	<link rel="stylesheet" href="cores.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <button class="default" id="home" style="display: none;">Home</button>
-    <button class="default" id="moduloPage" style="display: none;">Modulos</button>
-    <input class="default" type="text" id="issue" placeholder="Num. Issue" style="display: none;">
-    <button class="default" id="issueButton" style="display: none;">🔍</button>
-    <input class="modulo" type="text" id="palavra" placeholder="Digite a palavra-chave" style="display: none;">
-    <button class="modulo" id="marcar" style="display: none;">Marcar</button>
-    <button class="modulo" id="desmarcar" style="display: none;">Desmarcar</button>
-    <button class="modulo" id="salvar" style="display: none;">Salvar</button>
-    <strong><span id="key" style="display: none;"></span></strong>
-    <strong><span id="resultado" style="display: none;"></span></strong>
-    <div id="detalhes-checkboxes" style="display: none;"></div>
+	<div class="btn-row" style="display: none;" id="homeRow">
+		<button class="default" id="home">Home</button>
+		<button class="default" id="homeNewTab">↗</button>
+	</div>
+	<div class="btn-row" style="display: none;" id="moduloRow">
+		<button class="default" id="moduloPage">Modulos</button>
+		<button class="default" id="moduloPageNewTab">↗</button>
+	</div>
+	<input class="default" type="text" id="issue" placeholder="Num. Issue" style="display: none;">
+	<button class="default" id="issueButton" style="display: none;">🔍</button>
+	<input class="modulo" type="text" id="palavra" placeholder="Digite a palavra-chave" style="display: none;">
+	<button class="modulo" id="marcar" style="display: none;">Marcar</button>
+	<button class="modulo" id="desmarcar" style="display: none;">Desmarcar</button>
+	<button class="modulo" id="salvar" style="display: none;">Salvar</button>
+	<strong><span id="key" style="display: none;"></span></strong>
+	<strong><span id="resultado" style="display: none;"></span></strong>
+	<div id="detalhes-checkboxes" style="display: none;"></div>
 	<div id="snippetsContainer" style="display: none;"></div>
-    <script src="popup.js"></script>
+	<script src="popup.js"></script>
 </body>
 
 

@@ -178,3 +178,22 @@ div#detalhes-checkboxes li:last-child {
 .snippet-button.regressivo:hover {
 	background-color: var(--purple-amethyst);
 }
+
+.btn-row {
+	display: flex;
+	margin-bottom: 6px;
+	width: 100%;
+}
+
+.btn-row button:first-child {
+	flex: 7;
+	border-right: 1px solid var(--gray-slate);
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+.btn-row button:last-child {
+	flex: 3;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
