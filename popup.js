@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 								func: function (palavraChave) {
 									let count = 0;
 									let textosAlterados = [];
-									let regex = new RegExp(`\\b${palavraChave}\\b|\\(${palavraChave}\\)`, 'i');
+									let regex = new RegExp(palavraChave.trim().split(/\s+/).map(term => `(?=.*${term})`).join(''), 'i');
 									document.querySelectorAll('tr').forEach(function (linha) {
 										let textoCelula = linha.innerText.toLowerCase();
 										if (regex.test(textoCelula))
